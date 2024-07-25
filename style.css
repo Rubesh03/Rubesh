@@ -1,0 +1,49 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact{
+    justify-content: center;
+    padding-top: 5px;
+    background-color: antiquewhite;
+    padding-left: 5px;
+    border-color: black;
+    border-width: 1px;
+    height: 25px;
+}
+#content{
+    background-color: aqua;
+    height: 50px;
+    width: 50px;  
+}
+#padding{
+    background-color: rgb(0, 132, 255);
+    height: 50px;
+    width: 50px;
+}
+#border{
+    background-color: rgb(195, 0, 255);
+    height: 50px;
+    width: 50px;
+}
+#margin{
+    background-color: rgb(255, 0, 128);
+    height: 50px;
+    width: 50px;
+}
+*{
+    background:#d3d3d3;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    background-color: #000;
+}
+#bar{
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+}
+#bar:hover{
+    color: #000;
+}

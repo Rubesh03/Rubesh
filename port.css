@@ -1,0 +1,65 @@
+*{
+    font-size: medium;
+}
+.Aboutme{
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    display: flex;
+}
+#edu{
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.Education{
+    justify-content: space-between;
+    border-style: solid;
+    border-color: #d3d3d3;
+    border-width: 1px;
+    padding: 5px;
+    padding-left: 15px;
+}
+#logo{
+    justify-content: space-between;
+    margin-left: 15%;
+    height: 30px;
+    width: 30px;
+}
+#ach{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+ 
+}
+.Achivements{
+    justify-content: space-between;
+    border-style: solid;
+    height: 15%;
+    width: 40%;
+    border-color: #d3d3d3;
+    border-width: 1px;
+    padding: 5px;
+    padding-left: 15px;
+}
+#pro{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    
+}
+.project{
+    border-style: solid;
+    justify-content: space-between;
+    height: 150px;
+    width: 550px;;
+    border-color: #d3d3d3;
+    border-width: 1px;
+    padding: 5px;
+    padding-left: 15px;
+}
