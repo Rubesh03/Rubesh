@@ -5,41 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rubesh</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> -->
+    <link rel="icon" href="data:image/png;base64,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" type="image">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="port.css">
 </head>
 <body>
-    <nav  class="navbar navbar-inverse">
+
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="12467968-uhd_3840_2160_24fps (1).mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <nav  class="navbar navbar-inverse navbar-fixed-top" style="padding: 1%; font-size: medium;">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="Rubesh U-CV Resume.pdf">Rubesh U</a>
           </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" id="bar">About Me </a></li>
-            <li><a href="#" id="bar">Education</a></li>
-            <li><a href="#" id="bar">Skills</a></li>
-            <li><a href="#" id="bar">Achivements</a></li>
-            <li><a href="#" id="bar">Projects</a></li>
-            <li><a href="#" id="bar">Contact</a></li>
+            <li><a href="#Aboutme" id="bar">About Me </a></li>
+            <li><a href="#Educate" id="bar">Education</a></li>
+            <li><a href="#Skills" id="bar">Skills</a></li>
+            <li><a href="#Achivements" id="bar">Achivements</a></li>
+            <li><a href="#projects" id="bar">Projects</a></li>
+            <li><a href="#contact" id="bar">Contact</a></li>
         </ul>
         <button class="btn navbar-btn"><span class="glyphicon glyphicon-download"></span>Download</button>
     </div>
-    </nav>
-    <br>
-    <br>
-    <div class="info">
+</nav>
+<br>
+<br>
+<div class="page">
+    <div class="info" style="padding-top: 8%;">
       <img src="dp.png" alt="dp"  style="padding-left: 5%;">
-      <div class="Aboutme">
+      <div id="Aboutme">
           <h2 style="padding-left: 5%;">About me</h2>
           <br>
-          <p style="padding-left: 5%;">Highly motivated and results-oriented engineering college
+          <p style="padding-left: 5%; word-spacing: 5px;">Highly motivated and results-oriented engineering college
             student with a strong foundation in technical skills and a keen
             interest in software development and designing. Possesses a
             blend of technical and soft skills, including communication,problem-solving and analytical abilities.
             </p>
         </div>
+        <hr>
     </div>
-    <hr>
+    <div id="Educate">
     <h2 style="padding-left: 12%;">Education</h2>
     <br>
     <div id="edu">
@@ -62,30 +75,37 @@
     </div>
     <br>
 </div>
-<br>
-<hr>
+</div>
+<div id="Skills">
 <h2 style="padding-left: 12%;">Skills</h2>
 <br>
 <h4  style="padding-left: 12%;">Languages</h4>
     <br>
     <img src="java.png" alt="cpp" id="logo">  Java
     <br>
-    <img src="cpp.png" alt="cpp" id="logo">  DSA in C++
     <br>
-    <img src="hcj.jpeg" alt="hcg" id="logo">  HTML,CSS,Java script
+    <img src="c-cpp.918x1024.png" alt="cpp" id="logo">  DSA in C++
+    <br>
+    <br>
+    <img src="hcj.png" alt="hcg" id="logo">  HTML,CSS,Java script
+    <br>
     <br>
     <img src="sql.png" alt="hcg" id="logo">  MySQL
     <br>
+    <br>
     <h4  style="padding-left: 12%;">Tools</h4>
     <br>
-    <img src="figma.jpeg" alt="hcg" id="logo">  Figma And
     <br>
-    <img src="xd.png" alt="hcg" id="logo">  Adobe Xd for UI/UX
+    <img src="figma.png.png" alt="hcg" id="logo">  Figma And
+    <br>
+    <br>
+    <img src="xd (2).png" alt="hcg" id="logo">  Adobe Xd for UI/UX
+    <br>
     <br>
     <img src="eclipse.png" alt="hcg" id="logo">  Eclipse
     <br>
-    <hr>
-    <br>
+</div>
+<div id="Achivements">
     <h2 style="padding-left: 12%;">Achivements</h2>
     <br>
     <div id="ach">
@@ -100,28 +120,28 @@
         <p><i>2024</i></p>
     </div>
     </div>
-    <hr>
-    <br>
+</div>
+    <div id="projects">
     <h2 style="padding-left: 12%;">Projects</h2>
     <br>
     <div id="pro">
         <div class="project">
-            <h3>Thid eye for blind</h3>
-            <h4>A hardware project with a glove designed for blind<br> people to navigate around streets</h4>
+            <h3>Third eye for blind</h3>
+            <h4>A hardware project with a glove designed for blind people to navigate around streets</h4>
         </div>
         <div class="project">
             <h3>Amazon Clone</h3>
             <h4>Designing Amazon User Interface</h4>
         </div>
     </div>
-    <hr>
+    </div>
+    <div id="contact">
+    <h2 style="padding-left: 12%;color: white;">Contact</h2>
     <br>
-    <h2 style="padding-left: 12%;">Contact</h2>
-    <br>
-    <a href="+91 9791752271"></a><span class="glyphicon glyphicon-earphone"  style="padding-left: 12%;"></span>+91 9791752271
-    <a href="rubesh034@gmail.com"><span class="glyphicon glyphicon-envelope"  style="padding-left: 12%;"></span>rubesh034@gmail.com</a>
-    <hr>
+    <a href="+91 9791752271"><span class="glyphicon glyphicon-earphone"  style="padding-left: 12%;"></span>+91 9791752271</a>
+    <a href="mailto:rubesh034@gmail.com"><span class="glyphicon glyphicon-envelope"  style="padding-left: 12%;"></span>rubesh034@gmail.com</a>
+    </div>
 
-    
+</div>
 
 </body>
