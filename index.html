@@ -3,121 +3,973 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Rubesh</title>
+    <link rel="icon" href="">
 </head>
-<style>
-    .profile{
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-    }
-    #intro{
-        justify-content: center;
-        align-items: center;
-    }
-    .contact{
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
-        /* padding-left: 5%;
-        margin-left: 5%; */
-    }
-    #linkedin{
-        height: 15px;
-        width: 15px;
-        border-style: solid;
-        border-color: black;
-    }
-    
-</style>
 <body>
-    <center>
-    <div id="intro">
-    <img class="profile" src="data:image/jpeg;base64,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" alt="skcet logo">
-    <h1>Rubesh U</h1>
-    <h3 style="font-style: italic;">Third year Electronics and Communication Engineering Student</h3>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="#"><i class="bi bi-list pe-2"></i></a>
+      <a class="navbar-brand" href="#"> <b>Pizza</b><b class="hub">Hub</b></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Restaurants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+        </ul>
+        <form class="d-flex">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <button class="btn btn-outline-light" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+        <div class="navbar-nav ms-auto">
+          <button class="btn me-2"><a href="#" class="sign"><i class="bi bi-person"></i> Sign Up</a></button>
+          <button class="btn"><a href="#" class="sign"><i class="bi bi-box-arrow-in-right"></i> Login</a></button>
+        </div>
+      </div>
     </div>
-    </center>
-    <ul class="contact">
-        <li style="padding-left: 255px;"><a href="rubesh.linkedin.in"><img id="linkedin"
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADA
-            CAMAAAB/Pny7AAAAbFBMVEUAd7f///8AdLYAcLQAa7IAZ7Bon8vj7/aZvdrN5PDX5fAUf7vI3Os7h7/M3+w1frqcwt2iwd33+/3w9vq70+aRvN
-            pVkcOIstSPttZgocw1jcJwpc7c6vMlhr5emMcAYa18qtBKlsary+JNh7/BoUTAAAAGD0lEQVR4nO2dDXOjIBCGYdFoxSQGSEyqSfPx///joWnvm
-            kSFYJiAxztz7cxVkUc+XJddRFgq2xDktcgmaziQ/JfMPGeRNLPkCsPK6N11Ga+oZC1MDvDuqowXQN7AcP87WSMy4xJGTKCTNSJCwkyjYZqmwYhN
-            hEXSMCTid1fiVYo
-            F2k5kyMjZeYt20+lmO/Q5gYfMVfCJ6Lvr8DpNCOW/FsAU
-            zDgpEsURUIrIl/z97sqMEkTRaS3qpFEtjjQm3vJATAvO8F8
-            xllXE02ct2Qv8IL4mHj5tAW3ZI0vzsv3pXV+DTd6J0qhc+kUDh6yXBePz3KeuRg71AAvGwiMashlmkTTe9DSARMGCWYo8oYk7puR78c
-            oPmGjWPSffajH3gQaIasBcVfoA0zo8NZT4MAeQoSfMbx3dh7n61XX04T5MtNJkwdj5KQBQv0320M9cNwNgoztkpBngulNUf8hgXDsPoz
-            kxN+Kuv3WSnleyLjHXJ4BnYPCUYJxvGV1jpoVxfswcuTZM4jyM8iXznxauT82wX2jDrF1vmWYlWlcn180ZOQPoDhruvhsAqK5xdna+YfTcGa02zjdMMwXomZrnd1dUS3qvZ/zgQcM072c6TZO+u5qaIge1SZM7/878o3irYkkOHkxl34JCMWAqf1jksBmkSTxxNH+rdxGwZTl5xdIsa/R6NoT7ZsyDCCm6GoefnLeVu3QfBiDFsmPk0dC/EcToKJKEMynOk+x88jWmoRWQCD6rcptuyxmNvG2Vf5JAjbwLZQgKCvJE4H3kZE
-            tAJASl+/2eUgqEECtQ/WV2X26gEl1/av5vOd+VxUfzUP62L3iSF+VpOVSWkeBSpatubQ8dEQCADmXRd8Ls/gSA5aY6192GOcvTw2XgZj7Pchx
-            yOYsHLxPMzwPH351AYC6tpKHjcZbO6Kue0lANewEeciJB4Wz75TIA2KQa/mwujvQ11pMyRmt1e9fITHE8S38qFi1TzXUGnlfxCxqHnFQXym47Wj
-            TYyRoJ2p4AUC2eWAEW+/FWeqT2ztxmrMUfqhOu/Qxgpb+W1SibjaaJUjswbVLlc+Ll2KB9SzAa4ZKPYsXIWc0ODEHPdbEfFeMeOVZgCNKPyrkR
-            GxdzaAUG6a8v3omPCtOzArN6IvTj/mpjlk9swKzNBsxV2YhhYwEmMZjIfik1DzmwADNSzDz5wD0Y/GFsCTgIw3amNA7C4GxKMMaLdS7C4IVh0z
-            gJY7om7CQMW5k1jZMwOKdGZoCbMInZFOAmDF5NCUYY9TNHYTKjCDf7MIyxJKvlz6dOMspxsQzDs/WJfDWKaSUSfaDUuZbh4kD+rvYCiek208
-            U5mwwamzBZBbedBaK5rmfQKDfUIozYPD7HATRj9o18AfZgxLJrDGvTmGxjZg3mo5OloVFesZWJB80WTP+bPBAtL7RJlKstmKrf7iVUp4CzQQqyJZhBp8SXjsPTZE8FSzCDu5CBTtNkBnOzHZjFcEVinYXOiyswipBbclQXwQ
-            xMTSswtaKLwFzjhrgCU6iCbkFjFdoVGOUiCyiXrDHeuQFTK28qlN7ACOWsCgc1jEHcvg2YQnlVuKhhDIwzGzCl0uCFi/olbesEjMb
-            u0HBRr66tn2axAVOrPcWwVK+tuwGj4SaCpdqgcQNGI0ftv4MxcDa5C1MEmAATYAJMgAkwASbABJgAE2ACTIAJMAEmwASYABNgAkyACTA
-            BJsAEmAATYAJMgAkwASbABJgAE2ACTIAJMJZgbO1v9g4YUqkKrW+TDCNlxpgWjDrvzCBGE4Gq0Lt9zsladcJZ55YqSzHJBVBWLrlPhSOK+
-            Or6fnvHLoGt7/iKoVD2pLxPhYPTYNZoog6eb0upBu8JM8uhR0COedanrpReMj/3Hi9P0Mx8JRvRX0q26klZVSuKEO0WdO5uCRH0HE+R/naYA
-            6VQMmarQ+jTy054qpARJEFvE313BV4nigZzc70SfKKd/19f+BbZodTnr2LcKEpR7vonF7UV54hNZeIGYAj79A2pIcn3FYTzqcDkEsarz3v1i
-            1RcwuB8CqOm3ZxbwrDtBGbnqPmEmYTB3PnPyCt1/ZjxHwDNh8yCpeUwAAAAAElFTkSuQmCC" alt=""></a>Rubesh</li>
-        <li><a href="">+91 9791752271</a></li>
-        <li style="padding-right: 255px;"><a href="www.rubesh.com">www.rubesh.com</a></li>
-    </ul>
-    <h3>About me</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti vel quisquam omnis cupiditate perferendis magnam unde necessitatibus consequuntur veritatis aliquam ipsam maiores libero fugiat vero, earum nobis distinctio alias quibusdam labore officiis eos rem tempore. Dolores tenetur animi asperiores inventore.</p>
-    <hr>
-    <h3>Education</h3>
-    <table border="1">
-        <tr>
-            <th>S.NO</th>
-            <th>Education</th>
-            <th>Percentage</th>
-            <th>Year</th>
-        </tr>
-    <tr>
-        <td>1</td>
-        <td>SSLC</td>
-        <td>100%</td>
-        <td>2020-2021</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>HSC</td>
-        <td>100%</td>
-        <td>2021-2022</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>SEMESTER</td>
-        <td>100%</td>
-        <td>2022-2026</td>
-    </tr>
-    </table>
-    <hr>
-    <h3>Skills</h3>
-    <p>nothing</p>
-    <div id="margin">
+  </nav>
+
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#RECOMMENDED">RECOMMENDED</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#NEW LAUNCHES">NEW LAUNCHES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#CHEESIKEN">CHEESIKEN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#CHEESE">CHEESE VOLCANO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#VEG">VEG PIZZA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#NON-VEG">NON-VEG PIZZA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#BEVERAGES">BEVERAGES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#GARLIC">GARLIC BREADS & MORE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#DESSERTS">DESSERTS</a>
+        </li>
+      </ul>
     </div>
-    
-    <div id="content">
-    </div>
-    
-    <div id="padding">
-    </div>
-    
-    <div id="border">
+  </nav>
+
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
     </div>
 
-        <h1 id="abbr">skcet</h1>
-        <button onclick="abbrivate()"abbr>click here</button>
+    <div class="carousel-inner">
+      <div class="carousel-item active  item-a" data-bs-interval="2000">
+        <img src="carousel 1.jpg" alt="Los Angeles" class="d-block w-100 b-img">
+        <div class="carousel-caption">
+        <button class="btn btn-i col-sm-4" type="button">order pickup</button>
+        <button class="btn btn-i" type="button">delivery</button>
+        </div>
+      </div>
+      <div class="carousel-item  item-a" data-bs-interval="2000">
+        <img src="carousel 2.jpg" alt="Chicago" class="d-block w-100 b-img">
+        <div class="carousel-caption">
+        <button class="btn btn-i" type="button">order pickup</button>
+        <button class="btn btn-i" type="button">delivery</button>
+        </div>
+      </div>
+      <div class="carousel-item  item-a" data-bs-interval="2000">
+        <img src="carousel 3.jpg" alt="New York" class="d-block w-100 b-img">
+        <div class="carousel-caption">
+        <button class="btn btn-i" type="button">order pickup</button>
+        <button class="btn btn-i" type="button">delivery</button>
+        </div>
+      </div>
+    </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div id="RECOMMENDED">
+  <h3 class="pt-5 ps-5">Recommended</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Blazing Onion & Paprika.jpeg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹329 </h6>
+          <div class="card-body">
+            <h6>Blazing Onion & Paprika</h6>
+            <p>Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's cheesy base.</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                 <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="peppy paneer.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹459 </h6>
+          <div class="card-body">
+            <h6>Peppy paneer</h6>
+            <p>Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Margherita.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹239 </h6>
+          <div class="card-body">
+            <h6>Margherita</h6>
+            <p>Classic delight with 100% real mozzarella cheese</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Pepper Barbecue Chicken.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹449 </h6>
+          <div class="card-body">
+            <h6>Pepper Barbecue Chicken</h6>
+            <p>Pepper barbecue chicken for that extra zing</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Chicken Sausage.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹369 </h6>
+          <div class="card-body">
+            <h6>Chicken Sausage</h6>
+            <p>American classic! Spicy, herbed chicken sausage on pizza</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Farmhouse.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹459 </h6>
+          <div class="card-body">
+            <h6>Farmhouse</h6>
+            <p>Delightful combination of onion, capsicum, tomato & grilled mushroom</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+
+  <div id="NEW LAUNCHES">
+  <h3 class="pt-5 ps-5">New Launches</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Tangy Tomato Cheesiken Rice.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay">₹199</h6>
+          <div class="card-body">
+            <h6>Tangy Tomato Cheesiken Rice</h6>
+            <p>Flavour packed & fulfilling combination of Tender Chicken Chunks, Tangy Tomato Sauce, Mozzarella cheese</p>
+            <div class="bottom d-flex">
+              <div class="dropdown-disabled">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Spicy Crispy Wings.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay">₹109</h6>
+          <div class="card-body">
+            <h6>Spicy Crispy Wings</h6>
+            <p>Crispy Chicken Wings, cooked to perfection with Chili Seasoning for an explosive flavor experience!</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Cheese Volcano Veg Paradise.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay">₹299</h6>
+          <div class="card-body">
+            <h6>Cheese Volcano Veg Paradise</h6>
+            <p>Centre loaded with Molten Cheese & topped with Golden Corn, Black Olives, Capsicum & Red Paprika</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="CHEESIKEN">
+  <h3 class="pt-5 ps-5">Cheesiken</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Tangy Tomato Cheesiken Rice.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay">₹199</h6>
+          <div class="card-body">
+            <h6>Tangy Tomato Cheesiken Ric</h6>
+            <p>Flavour packed & fulfilling combination of Tender Chicken Chunks, Tangy Tomato Sauce, Mozzarella cheese</p>
+            <div class="bottom d-flex">
+              <div class="dropdown-disabled">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Hot & Fiery Cheesiken Rice.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay">₹199</h6>
+          <div class="card-body">
+            <h6>Hot & Fiery Cheesiken Rice</h6>
+            <p>Flavour packed & fulfilling combination of Tender Chicken Chunks, Spicy Guntur Chili Sauce, Mozzarella cheese</p>
+            <div class="bottom d-flex">
+              <div class="dropdown-disabled">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Garlic Cheesiken Rice.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay">₹199</h6>
+          <div class="card-body">
+            <h6>Garlic Cheesiken Rice</h6>
+            <p>Flavour packed & fulfilling combination of Tender Chicken Chunks, Creamy Garlic Sauce, Mozzarella cheese</p>
+            <div class="bottom d-flex">
+              <div class="dropdown-disabled">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Regular</a></li>
+                  <li><a class="dropdown-item">Medium</a></li>
+                  <li><a class="dropdown-item">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="CHEESE">
+  <h3 class="pt-5 ps-5">Cheese Volcano</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+          <div class="col">
+            <div class="card" style="width: 300px;">
+              <img src="Cheese Volcano Veg Paradise.jpg" alt="img" class="card-img-top">
+              <h6 class="card-img-overlay"> ₹299 </h6>
+              <div class="card-body">
+                <h6>Cheese Volcano Veg Paradise</h6>
+                <p>Centre loaded with Molten Cheese & topped with Golden Corn, Black Olives, Capsicum & Red Paprika</p>
+                <div class="bottom d-flex">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      Size
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item">Regular</a></li>
+                      <li><a class="dropdown-item">Medium</a></li>
+                      <li><a class="dropdown-item">Large</a></li>
+                    </ul>
+                  </div>
+                  <div class="cart">
+                    <button class="btn btn-info">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 300px;">
+              <img src="Cheese Volcano Double Chicken.jpg" alt="img" class="card-img-top">
+              <h6 class="card-img-overlay"> ₹349 </h6>
+              <div class="card-body">
+                <h6>Cheese Volcano Double Chicken</h6>
+                <p>Centre loaded with Molten Cheese & topped with Pepper BBQ Chicken & Peri Peri Chicken.</p>
+                <div class="bottom d-flex">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      Size
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item">Regular</a></li>
+                      <li><a class="dropdown-item">Medium</a></li>
+                      <li><a class="dropdown-item">Large</a></li>
+                    </ul>
+                  </div>
+                  <div class="cart">
+                    <button class="btn btn-info">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 300px;">
+              <img src="Cheese Volcano Blazing Chicken.jpg" alt="img" class="card-img-top">
+              <h6 class="card-img-overlay"> ₹349 </h6>
+              <div class="card-body">
+                <h6>Cheese Volcano Blazing Chicken</h6>
+                <p>Centre loaded with Molten Cheese & topped with Chicken Keema & Red Paprika with our spicy Peri Peri Sauce</p>
+                <div class="bottom d-flex">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      Size
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item">Regular</a></li>
+                      <li><a class="dropdown-item">Medium</a></li>
+                      <li><a class="dropdown-item">Large</a></li>
+                    </ul>
+                  </div>
+                  <div class="cart">
+                    <button class="btn btn-info">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="VEG"></div>
+  <h3 class="pt-5 ps-5">Veg Pizza</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Farmhouse.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹459 </h6>
+          <div class="card-body">
+            <h6>Farmhouse</h6>
+            <p>Delightful combination of onion, capsicum, tomato & grilled mushroom</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Regular</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart ms-auto">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="peppy paneer.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹459 </h6>
+          <div class="card-body">
+            <h6>Peppy Paneer</h6>
+            <p>Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Regular</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart ms-auto">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Blazing Onion & Paprika.jpeg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹329 </h6>
+          <div class="card-body">
+            <h6>Blazing Onion & Paprika</h6>
+            <p>Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's cheesy base.</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Regular</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart ms-auto">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="#NON-VEG">
+  <h3 class="pt-5 ps-5">Non-Veg Pizza</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Pepper Barbecue Chicken.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹449 </h6>
+          <div class="card-body">
+            <h6>Pepper Barbecue Chicken</h6>
+            <p>Pepper barbecue chicken for that extra zing</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Regular</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart ms-auto">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Chicken Dominator.jpg" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹599 </h6>
+          <div class="card-body">
+            <h6>Chicken Dominator</h6>
+            <p>Loaded with double pepper barbecue chicken, peri-peri chicken, chicken tikka & grilled chicken rashers</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Regular</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart ms-auto">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 300px;">
+          <img src="Chicken Pepperoni.png" alt="img" class="card-img-top">
+          <h6 class="card-img-overlay"> ₹599 </h6>
+          <div class="card-body">
+            <h6>Chicken Pepperoni</h6>
+            <p>A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped with extra cheese</p>
+            <div class="bottom d-flex">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Regular</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </div>
+              <div class="cart ms-auto">
+                <button class="btn btn-info">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="BEVERAGES"></div>
+  <h3 class="pt-5 ps-5">Beverages</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Pepsi 475ml.jpg" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹60 </h6>
+                <div class="card-body">
+                  <h6>Pepsi 475ml</h6>
+                  <p>Sparkling and Refreshing Beverage</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="B Natural Alphonsos from Ratnagiri (300 ml).jpg" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹75 </h6>
+                <div class="card-body">
+                  <h6>B Natural Alphonsos from Ratnagiri (300 ml)</h6>
+                  <p>Alphonsos only from Ratnagiri with the Goodness of Fiber</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Lipton Ice Tea ( 350 ml).jpg" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹60 </h6>
+                <div class="card-body">
+                  <h6>Lipton Ice Tea ( 350 ml)</h6>
+                  <p>Refreshment Sahi, Gas Nahi</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+</div>
+
+  <div id="GARLIC">
+  <h3 class="pt-5 ps-5">Garlicbread & more</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Classic Stuffed Garlic Bread.png" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹159 </h6>
+                <div class="card-body">
+                  <h6>Classic Stuffed Garlic Bread</h6>
+                  <p>Freshly baked garlic bread with cheese, juicy corn & tangy jalapeno</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Taco Mexicana Non Veg.png" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹169 </h6>
+                <div class="card-body">
+                  <h6>Taco Mexicana Non Veg</h6>
+                  <p>Truly irresistible! Crispy taco with non-veg patty & creamy harissa sauce</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Chicken Parcel.jpg" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹59 </h6>
+                <div class="card-body">
+                  <h6>Chicken Parcel</h6>
+                  <p>Snacky bites! Pizza rolls with chicken sausage & creamy harissa sauce</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="DESSERTS">
+  <h3 class="pt-5 ps-5">Desserts</h3>
+  <div class="container mt-5">
+    <div class="row mt-3">
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Red Velvet Lava Cake.jpg" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹139 </h6>
+                <div class="card-body">
+                  <h6>Red Velvet Lava Cake</h6>
+                  <p>A truly indulgent experience with sweet and rich red velvet cake on a creamy cheese flavoured base to give a burst</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Choco Lava Cake.jpg" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹109 </h6>
+                <div class="card-body">
+                  <h6>Choco Lava Cake</h6>
+                  <p>Chocolate lovers delight! Indulgent, gooey molten lava inside chocolate cake</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 300px;">
+                <img src="Butterscotch Mousse Cake.png" alt="img" class="card-img-top">
+                <h6 class="card-img-overlay"> ₹109 </h6>
+                <div class="card-body">
+                  <h6>Butterscotch Mousse Cake</h6>
+                  <p>Sweet temptation! Butterscotch flavored mousse</p>
+                  <div class="bottom d-flex">
+                    <div class="dropdown-disabled">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Size
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Regular</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Large</a></li>
+                      </ul>
+                    </div>
+                    <div class="cart">
+                      <button class="btn btn-info">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="fixed-button">
+    <button class="btn btn-primary btn-lg"><i class="bi bi-cart"></i>  Cart</button>
+</div>
+
+  <div class="footer mt-3">
+    <div class="footer-in d-flex">
+      <div class="foot-1">
+
+        <h4 style="color: white; margin-bottom: 3%;">PizzaHub</h4>
+          <ul>
+            <a href="#"><li>About us</li></a>
+            <a href="#"><li>Disclaimer</li></a>
+            <a href="#"><li>Privacy Policy</li></a>
+            <a href="#"><li>Faq</li></a>
+            <a href="#"><li>Terms & Conditions</li></a>
+            <a href="#"><li>Nutritional Information</li></a>
+            <a href="#"><li>Feedback</li></a>
+          </ul> 
+      </div>
+      <div class="foot-2">
+
+        <h4>DOWNLOAD NOW</h4>
+        <a href="https://play.google.com/" target="_blank"><img src="play_store.png" alt="ps" class="png"></a>
+        <a href="https://www.apple.com/in/app-store/" target="_blank"><img src="app_store.png" alt="ps" class="png"></a>
+      </div>
+
+    </div>
+      <br>
+      <hr>
+      <p class="Copyright mt-5">All Rights Reserved. Copyright ©</p>
+  </div>    
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
-
-    <script>
-        function abbrivate() {
-            document.getElementById("demo" );
-        }
-    </script>
 </html>
